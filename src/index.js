@@ -4,7 +4,7 @@ function createHeader() {
     return header;
 }
 
-function sendReq() {
+function sendJsonp() {
 	// 生成一个script tag
 	const head = document.getElementsByTagName('head')[0];
 	const script = document.createElement('script');
@@ -57,5 +57,5 @@ function createButton(buttonHtml, requestFn) {
 }
 
 document.body.appendChild(createHeader());
-document.body.appendChild(createButton('发送正常请求(有跨域问题)',sendReq));
-document.body.appendChild(createButton('请求正常', sendNormalRequest));
+document.body.appendChild(createButton('发送正常请求(有跨域问题)',sendNormalRequest));
+document.body.appendChild(createButton('JSONP请求', sendJsonp));
