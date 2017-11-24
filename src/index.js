@@ -1,6 +1,6 @@
 function createHeader() {
     const header = document.createElement('h2');
-    header.innerHTML = 'hello world';
+    header.innerHTML = 'hello cross origin';
     return header;
 }
 
@@ -23,7 +23,8 @@ function sendNormalRequest() {
 	const xhr = new XMLHttpRequest();
 	// 注册监听readyState值变化的function
     xhr.onreadystatechange = function() {
-		// readyState属性表示请求/响应过程的当前活动阶段，4为完成，已经接收到全部响应数据
+		// readyState 请求/响应过程的当前活动阶段
+        // 值为4表示完成，已接收到全部响应数据
 		if(xhr.readyState === 4) {
 			const status = xhr.status;
 			// http状态码 2开头的都是成功的
