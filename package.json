@@ -1,0 +1,28 @@
+{
+  "name": "cross-origin-demo",
+  "version": "1.0.0",
+  "description": "A demo of cross origin. Implemrnt the jsonp request by pure js.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "webpack-dev-server --inline --hot --port 10114 --open & npm run server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "node src/server.js"
+  },
+  "keywords": [
+    "javaScript",
+    "cross-origin",
+    "jsonp"
+  ],
+  "author": "bin.zhu",
+  "license": "MIT",
+  "dependencies": {
+    "webpack": "^3.8.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "clean-webpack-plugin": "^0.1.17",
+    "webpack-dev-server": "^2.7.1"
+  }
+}
