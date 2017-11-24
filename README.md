@@ -18,17 +18,15 @@ npm run server
 npm start
 ```
 
-根据**同源政策**
+#### 根据同源政策, 以下三项都相同时才符合同源, 不然就是跨域
 
 >1. 协议 
 >2. 域名 
 >3. 端口 
 
- 三者都相同时才符合同源, 不然会有跨域问题
- 
  当在端口10114上的客户端去请求也在本地8888端口的服务端的时候,就会有跨域问题.
 
-点击网页上第一个button(通过XMLHttpRequest直接请求localhost:8888), 此时浏览器会报跨域的错误.
+点击网页上第一个button(通过XMLHttpRequest直接请求localhost:8888)
 
 ```javascript
 const xhr = new XMLHttpRequest();
@@ -59,6 +57,10 @@ xhr.onreadystatechange = function() {
 xhr.open('GET', 'localhost:8888', true);
 xhr.send(null);
 ```
+此时浏览器报跨域的错误.
+
+
+![browser error screencut](./img/crossOriginError.png)
 
 点击第二个button发送了一个jsonp类型的请求,就能正常接收到请求的返回值.
 
